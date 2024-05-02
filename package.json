@@ -1,0 +1,30 @@
+{
+  "name": "od-lang-tools",
+  "displayName": "OD lang tools",
+  "description": "Set of tools such as syntax highlighting and LSP to work with OD lang",
+  "version": "0.0.1",
+  "icon": "icon.svg",
+  "engines": {
+    "vscode": "^1.88.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "od",
+      "icon": {
+        "light": "icon.svg",
+        "dark": "icon.svg"
+      },
+      "aliases": ["ODScript", "od-lang"],
+      "extensions": [".od"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "od",
+      "scopeName": "source.od",
+      "path": "./syntaxes/od.tmLanguage.json"
+    }]
+  }
+}
